@@ -1,0 +1,62 @@
+.mdc-root {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+  .mdc-root-header {
+    -webkit-flex-basis: 7%;
+    flex-basis: 7%;
+  }
+
+  .mdc-root-main {
+    -webkit-flex-basis: 93%;
+    flex-basis: 93%;
+  }
+
+  .mdc-root-footer {
+    display: none;
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  .mdc-root-header {
+    -webkit-flex-basis: 7%;
+    flex-basis: 7%;
+  }
+
+  .mdc-root-main {
+    -webkit-flex-basis: 86%;
+    flex-basis: 86%;
+  }
+
+  .mdc-root-footer {
+    -webkit-flex-basis: 7%;
+    flex-basis: 7%;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  .mdc-root-header {
+    -webkit-flex-basis: 7%;
+    flex-basis: 7%;
+  }
+
+  .mdc-root-main {
+    -webkit-flex-basis: 86%;
+    flex-basis: 86%;
+  }
+
+  .mdc-root-footer {
+    -webkit-flex-basis: 7%;
+    flex-basis: 7%;
+  }
+}

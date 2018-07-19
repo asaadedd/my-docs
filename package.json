@@ -22,7 +22,12 @@
     "@angular/router": "^6.0.3",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "@ngrx/store": "^6.0.1",
+    "@ngx-translate/core": "^10.0.2",
+    "@ngx-translate/http-loader": "^3.0.1",
+    "log4js": "^2.10.0",
+    "rxjs-compat": "^6.2.2"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^6.0.3",

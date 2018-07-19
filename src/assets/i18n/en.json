@@ -1,0 +1,8 @@
+{
+  "header": {
+    "tabs": {
+      "home": { "TEXT": "HOME"},
+      "my-docs": { "TEXT": "MY DOCS"}
+    }
+  }
+}

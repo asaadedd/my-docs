@@ -25,7 +25,11 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/app/user/user.d.ts",
+              "src/app/core/core.d.ts",
+              "src/app/mdc.d.ts"
+            ]
           },
           "configurations": {
             "production": {
