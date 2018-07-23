@@ -1,21 +1,32 @@
 .header-root {
+  height: 100%;
   display: flex;
   flex-direction: row;
+  background-color: #88BBD6;
+}
+
+.header-logo {
+  -webkit-flex-basis: 10%;
+  flex-basis: 10%;
 }
 
 .header-logo-img {
-  -webkit-flex-basis: 10%;
-  flex-basis: 10%;
+  height: 100px;
+  margin: 5px 0 0 5px;
 }
 
 .header-nav-bar-root {
   display: flex;
   flex-direction: row;
-  -webkit-flex-basis: 80%;
-  flex-basis: 80%;
-}
+  -webkit-flex-basis: 90%;
+  flex-basis: 90%;
+  margin: 0 10px 0 10px}
 
 .header-nav-bar-elements {
-  -webkit-flex-basis: 10%;
-  flex-basis: 10%;
+  -webkit-flex-basis: 20%;
+  flex-basis: 20%;
+  color: #E9E9E9;
+  text-decoration: none;
+  margin-top: 25px;
+  font-size: 50px;
 }

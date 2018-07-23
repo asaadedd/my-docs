@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 import { CoreModule } from './core/core.module';
+import {CommonModule} from '@angular/common';
 
 import { MdcRootComponent } from './mdc.component';
 
@@ -10,6 +12,7 @@ import { MdcRootComponent } from './mdc.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     CoreModule
   ],
   providers: [],

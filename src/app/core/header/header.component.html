@@ -1,8 +1,6 @@
 <div class="header-root">
-  <img class="header-logo-img" [src]="coreConfig.HEADER.LOGO_URL">
+  <div class="header-logo"><img class="header-logo-img" [src]="coreConfig.HEADER.LOGO_URL"/></div>
   <div class="header-nav-bar-root">
     <a class="header-nav-bar-elements" *ngFor="let tab of tabs | async" [routerLink]="tab.url">{{ tab.translatePath | translate }}</a>
-  </div>
-  <div>
   </div>
 </div>

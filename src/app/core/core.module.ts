@@ -23,7 +23,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     RoutingModule,
     UserModule,
     HttpClientModule,
-    CommonModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -41,8 +40,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     RouterModule,
     UserModule,
     HeaderComponent,
-    FooterComponent,
-    CommonModule
+    FooterComponent
   ]
 })
 export class CoreModule { }

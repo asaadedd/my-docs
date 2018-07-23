@@ -1,0 +1,6 @@
+<div class="footer-root">
+  <a class="footer-element" *ngFor="let tab of tabs | async" [routerLink]="tab.url">
+    <img class="footer-element-img" [src]="tab.iconUrl"/>
+    <span class="footer-element-text">{{ tab.translatePath | translate }}</span>
+  </a>
+</div>

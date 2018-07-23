@@ -45,10 +45,6 @@ export class UserService {
     return this.getUser().pipe(map((userInfo: UserInfo) => userInfo.allowedPath));
   }
 
-  public getUserPhoto(): {
-
-  }
-
   private getUser(): Observable<UserInfo> {
     return Observable.create((subscriber: Subscriber<UserInfo>) => {
       if (this.userInfo) {

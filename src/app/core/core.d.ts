@@ -3,10 +3,16 @@ declare interface CoreConfig {
   HEADER: {
     LOGO_URL: string;
   };
+  COLORS: {
+    ICE: string;
+    FRESH_WATER: string;
+    PLASTER: string;
+    LINEN: string;
+  };
 }
 
 declare interface Tab {
-  name: string;
   url: string;
   translatePath: string;
+  iconUrl: string;
 }

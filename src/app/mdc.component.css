@@ -27,13 +27,12 @@
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
   .mdc-root-header {
-    -webkit-flex-basis: 7%;
-    flex-basis: 7%;
+    display: none;
   }
 
   .mdc-root-main {
-    -webkit-flex-basis: 86%;
-    flex-basis: 86%;
+    -webkit-flex-basis: 93%;
+    flex-basis: 93%;
   }
 
   .mdc-root-footer {
@@ -46,13 +45,12 @@
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
   .mdc-root-header {
-    -webkit-flex-basis: 7%;
-    flex-basis: 7%;
+    display: none;
   }
 
   .mdc-root-main {
-    -webkit-flex-basis: 86%;
-    flex-basis: 86%;
+    -webkit-flex-basis: 93%;
+    flex-basis: 93%;
   }
 
   .mdc-root-footer {
