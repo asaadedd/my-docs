@@ -1,24 +1,11 @@
-import { Component, OnDestroy } from '@angular/core';
-import { AccountService } from './account.service';
-import { Subscription } from 'rxjs';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'acc-root',
-  templateUrl: './account.component.html'
+  templateUrl: './account.component.html',
+  styleUrls: ['./account.component.css']
 })
 
-export class AccountComponent implements OnDestroy {
-  public isTutorial: boolean;
-  private accountSubscriber: Subscription;
-
-  constructor(private accountService: AccountService) {
-    this.isTutorial = this.accountService.isTutorial();
-    this.accountSubscriber = this.accountService.getAccount().subscribe((accountInfo: AccountInfo) => {
-      this.isTutorial = accountInfo.tutorial;
-    });
-  }
-
-  ngOnDestroy() {
-    this.accountSubscriber.unsubscribe();
-  }
+export class AccountComponent {
+  @HostBinding('class.account-root') class = true;
 }

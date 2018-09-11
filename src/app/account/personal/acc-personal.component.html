@@ -1,0 +1,11 @@
+<div class="property" *ngFor="let property of proprieties.slice(0, 2)">
+  <input class="property-input" type="text" spellcheck="false" placeholder="&nbsp;" [ngModel]="(property.value | async)" (ngModelChange)="changeProperty(property.key, $event)">
+  <span class="property-span">{{ 'information.personal.property.' + property.key | translate }}</span>
+</div>
+<span class="property-name">{{ 'information.personal.categories.dateOfBirth' | translate }}</span>
+<div class="property">
+  <div class="property-dob property-dob-{{property.key}}" *ngFor="let property of proprieties.slice(2, 5)">
+    <ng-select class="property-select" [items]="(property.options | async)" [ngModel]="(property.value | async)" (ngModelChange)="changeProperty(property.key, $event)"></ng-select>
+    <span class="property-select-span">{{ 'information.personal.property.' + property.key | translate }}</span>
+  </div>
+</div>

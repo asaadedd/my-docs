@@ -1,7 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css";
 
 html, body {
   height: 100%;
   width: 100%;
   margin: 0;
+}
+
+.ng-select.property-select .ng-select-container  {
+  border: 0 !important;;
+  border-bottom: 2px solid #99D3DF !important;;
+}
+
+.ng-select.property-select .ng-arrow-wrapper  {
+  display: none !important;
+}
+
+.ng-select.property-select .ng-clear-wrapper  {
+  color: #99D3DF !important;;
+}
+
+.ng-select.property-select .ng-dropdown-panel.property-select {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.ng-select.property-select .ng-select-container .ng-value-container .ng-value-label ,
+.ng-select.property-select .ng-dropdown-panel .ng-option .ng-option-label ,
+.ng-select.property-select .ng-select-container .ng-value-container .ng-input input {
+  color: #99D3DF;
 }

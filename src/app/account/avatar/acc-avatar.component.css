@@ -1,0 +1,17 @@
+.avatar {
+  -webkit-flex-basis: 50%;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.full-name {
+  -webkit-flex-basis: 50%;
+  flex-basis: 50%;
+  margin-top: 5%;
+  font-size: 130%;
+  color: #99D3DF;
+  justify-content: center;
+  align-items: center;
+}

@@ -8,8 +8,8 @@ export const UserConfig: UserConfig = {
       type: 'no-user',
       allowedPath: ['user/login', 'user/registration'],
       tabs: [
-        {url: 'account', translatePath: 'header.tabs.account.TEXT', iconUrl: 'assets/images/romanian.png'},
-        {url: 'docs', translatePath: 'header.tabs.docs.TEXT', iconUrl: 'assets/images/english.png'}
+        {url: 'account', translatePath: 'header.tabs.account.TEXT', iconUrl: 'assets/images/account.png'},
+        {url: 'docs', translatePath: 'header.tabs.docs.TEXT', iconUrl: 'assets/images/docs.png'}
       ]
     }],
     NO_USER: 'no-user',

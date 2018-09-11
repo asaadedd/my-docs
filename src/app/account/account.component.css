@@ -1,0 +1,23 @@
+:host(.account-root)   {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.account-avatar {
+  -webkit-flex-basis: 20%;
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #88BBD6;
+}
+
+.account-information {
+  -webkit-flex-basis: 80%;
+  flex-basis: 80%;
+  margin: 5% 0 0 5%;
+  display: flex;
+}

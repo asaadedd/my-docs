@@ -1,0 +1,87 @@
+:host(.account-root)   {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.property-name {
+  -webkit-flex-basis: 4%;
+  flex-basis: 4%;
+  margin: 0 38% 0 39%;
+  width: 24%;
+  font-size: 110%;
+  color: #99D3DF;
+}
+
+.property {
+  -webkit-flex-basis: 10%;
+  flex-basis: 10%;
+  margin: 5% 25% 0 25%;
+  width: 50%;
+}
+
+.property-input {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  border: 0;
+  font-size: 100%;
+  border-bottom: 2px solid #99D3DF;
+  color: #99D3DF;
+}
+
+.property-input:focus {
+  outline: none !important;
+}
+
+.property-span {
+  position: relative;
+  top: -35%;
+  font-size: 75%;
+  color: #99D3DF;
+  font-weight: 500;
+}
+
+.property-input:placeholder-shown + .property-span {
+  top: -5%;
+  font-size: 100%;
+}
+
+.property-input:focus:not(:placeholder-shown) + .property-span {
+  font-weight: 900;
+}
+
+.property-dob {
+  display: inline-block;
+  width: 33%;
+  height: 100%;
+  -webkit-flex-basis: 10%;
+  flex-basis: 10%;
+}
+
+.property-dob-month {
+  width: 45% !important;
+}
+
+.property-dob-day {
+  width: 21% !important;
+}
+
+.property-select {
+  position: relative;
+  top: 25%;
+}
+
+.property-select-span {
+  position: relative;
+  display: block;
+  top: -50%;
+  font-size: 75%;
+  color: #99D3DF;
+  font-weight: 500;
+}
+
+.property-select.ng-select-focused[ng-reflect-model] + .property-select-span {
+  font-weight: 900;
+}

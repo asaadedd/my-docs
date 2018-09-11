@@ -1,0 +1,16 @@
+{
+  "information": {
+    "personal": {"TEXT": "Personal information", "property": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "day": "Day",
+        "month": "Month",
+        "year": "Year"
+      }, "categories": {
+        "dateOfBirth": "Date of birth"
+      }
+    },
+    "security": {"TEXT": "Security"},
+    "payments": {"TEXT": "Payments methods"}
+  }
+}

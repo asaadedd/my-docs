@@ -1,0 +1,5 @@
+<div class="avatar" >
+  <ngx-avatar [src]="avatar | async" [bgColor]="'#99D3DF'" *ngIf="avatar | async"></ngx-avatar>
+  <ngx-avatar [name]="fullName | async" [bgColor]="'#99D3DF'" *ngIf="!(avatar | async)"></ngx-avatar>
+</div>
+<span class="full-name">{{fullName | async}}</span>

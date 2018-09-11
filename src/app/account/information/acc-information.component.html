@@ -1,0 +1,6 @@
+<div class="information-types">
+  <a class="information" *ngFor="let infoType of informationTypes" [routerLink]="infoType.URL">
+    <img class="information-img" [src]="infoType.ICON_PATH"/>
+    <span class="information-text">{{infoType.TRANSLATE | translate}}</span>
+  </a>
+</div>

@@ -1,0 +1,33 @@
+.information-types {
+  display: flex;
+  flex-direction: column;
+}
+
+.information {
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-basis: 10%;
+  flex-basis: 10%;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.information-img {
+  height: 50%;
+  width: 10%;
+  -webkit-flex-basis: 7%;
+  flex-basis: 7%;
+}
+
+.information-text {
+  margin-left: 5%;
+  -webkit-flex-basis: 93%;
+  flex-basis: 93%;
+  color: #99D3DF;
+  justify-content: center;
+  align-items: center;
+  font-size: 130%;
+}

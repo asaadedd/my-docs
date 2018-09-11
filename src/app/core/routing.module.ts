@@ -7,9 +7,7 @@ const routes: Routes = [
   // { path: 'stats', loadChildren: '', canLoad: [CoreRoutingGuard] },
   // { path: 'openings', loadChildren: '', canLoad: [CoreRoutingGuard] },
   // { path: 'my-openings', loadChildren: '', canLoad: [CoreRoutingGuard] },
-  { path: 'user', canActivate: [RoutingGuardService], children: [
-    // {path: 'login'}
-  ]}
+  { path: 'account', loadChildren: '../account/account.module#AccountModule'}
 ];
 
 @NgModule({
