@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
+
 export class HeaderComponent {
   public tabs: Observable<Array<Tab>>;
 

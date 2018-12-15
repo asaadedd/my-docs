@@ -1,16 +1,39 @@
 {
   "information": {
-    "personal": {"TEXT": "Personal information", "property": {
+    "personal": {
+      "TEXT": "Personal information",
+      "property": {
         "firstName": "First Name",
         "lastName": "Last Name",
         "day": "Day",
         "month": "Month",
-        "year": "Year"
-      }, "categories": {
+        "year": "Year",
+        "phone": "Phone number",
+        "email": "Email"
+      },
+      "categories": {
         "dateOfBirth": "Date of birth"
+      },
+      "messages": {
+        "wrongValue": "Wrong Value",
+        "valueChanged": "Value successfully changed"
       }
     },
     "security": {"TEXT": "Security"},
     "payments": {"TEXT": "Payments methods"}
+  },
+  "months": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December"
   }
 }

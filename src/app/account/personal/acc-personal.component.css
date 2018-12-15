@@ -3,6 +3,7 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
+  padding-top: 13%;
 }
 
 .property-name {
@@ -16,8 +17,8 @@
 
 .property {
   -webkit-flex-basis: 10%;
-  flex-basis: 10%;
-  margin: 5% 25% 0 25%;
+  flex-basis: 13%;
+  margin: 4% 25% 0 25%;
   width: 50%;
 }
 

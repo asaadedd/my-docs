@@ -5,6 +5,8 @@ import { AccountAvatarComponent } from './avatar/acc-avatar.component';
 import { AccountInformationComponent } from './information/acc-information.component';
 import { AccountPersonalComponent } from './personal/acc-personal.component';
 
+import { AccountPersonalInformationService } from './personal/acc-personal-information.service';
+
 import { CommonModule } from '@angular/common';
 import { AvatarModule } from 'ngx-avatar';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -39,14 +41,14 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     })
   ],
   providers: [
-    { provide: ACCOUNT_CONFIG, useValue: AccountConfig }
+    { provide: ACCOUNT_CONFIG, useValue: AccountConfig },
+    AccountPersonalInformationService
   ],
   bootstrap: []
 })
 
 export class AccountModule {
   constructor(private translate: TranslateService) {
-    console.log(translate);
     translate.setDefaultLang('en');
   }
 }

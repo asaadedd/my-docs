@@ -1,6 +1,6 @@
-import { Component, Inject, HostBinding } from '@angular/core';
-import { AccountService, AccountProperty } from '../account.service';
-import { Subject } from 'rxjs';
+import { Component, HostBinding, OnInit, OnDestroy } from '@angular/core';
+import { AccountPersonalInformationService, PersonalProperty } from './acc-personal-information.service';
+import { Subject, Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
@@ -9,24 +9,34 @@ import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
   styleUrls: ['./acc-personal.component.css']
 })
 
-export class AccountPersonalComponent {
+export class AccountPersonalComponent implements OnDestroy {
   @HostBinding('class.account-root') class = true;
-  public proprieties: AccountProperty[];
-  private modelChanged: Subject<ProprietyChange> = new Subject<ProprietyChange>();
+  public proprieties: PersonalProperty;
+  private readonly proprietiesSubscription: Subscription;
+  private readonly modelChanged: Subject<ProprietyChange>;
+  private readonly modelChangedSubscription: Subscription;
 
-  constructor(private accountService: AccountService) {
-    this.proprieties = this.accountService.getPersonalProprieties();
-    this.modelChanged
-      .pipe(debounceTime(500), distinctUntilChanged())
-      .subscribe(model => { this.accountService.setPersonalProperty(model.key, model.value); });
+  constructor(private accountPersonalInformation: AccountPersonalInformationService) {
+    this.modelChanged = new Subject<ProprietyChange>();
+    this.modelChangedSubscription = this.modelChanged
+      .pipe(debounceTime(500))
+      .subscribe(model => { this.accountPersonalInformation.setProperty(model.property, model.value); });
+    this.proprietiesSubscription = this.accountPersonalInformation.getProprieties().subscribe((proprieties: PersonalProperty) => {
+      this.proprieties = proprieties;
+    });
   }
 
-  changeProperty(key: string, value: string) {
-    this.modelChanged.next({key, value});
+  public changeProperty(property: string, value: string) {
+    this.modelChanged.next({property, value});
+  }
+
+  public ngOnDestroy() {
+    this.proprietiesSubscription.unsubscribe();
+    this.modelChangedSubscription.unsubscribe();
   }
 }
 
 interface ProprietyChange {
-  key: string;
+  property: string;
   value: string;
 }

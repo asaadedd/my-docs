@@ -23,7 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [
               "src/app/user/user.d.ts",
@@ -127,5 +127,7 @@
       }
     }
   },
-  "defaultProject": "my-docs"
+  "defaultProject": "my-docs",
+  "schematics": {
+  }
 }
