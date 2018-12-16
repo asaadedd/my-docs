@@ -21,6 +21,10 @@ export class AccountService {
         day: '1',
         year: '1995',
         phone: '0721674323'
+      },
+      security: {
+        loginWithFingerPrint: false,
+        loginWithPattern: false
       }
     };
     this.account = new BehaviorSubject(this.accountInfo);
@@ -50,6 +54,7 @@ export class AccountService {
 
 export interface AccountInfo {
   personal: PersonalInformation;
+  security: SecurityInformation;
   avatar?: Blob;
 }
 
@@ -60,4 +65,15 @@ export interface PersonalInformation {
   month: string;
   year: string;
   phone: string;
+}
+
+export interface SecurityInformation {
+  loginWithPattern: boolean;
+  loginWithFingerPrint: boolean;
+}
+
+export interface AccountProperty {
+  key: string;
+  value: string | boolean;
+  options?: string[];
 }

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./acc-avatar.component.css']
 })
 
-export class AccountAvatarComponent {
+export class AccAvatarComponent {
   public avatar: Observable<Blob>;
   public fullName: Observable<string>;
 

@@ -16,7 +16,7 @@ export const AccountConfig: IAccountConfig = {
   },
   SECURITY: {
     ALL_PARAMETERS: ['loginWithPattern', 'loginWithFingerPrint'],
-    MANDATORY_PARAMETERS: [],
+    MANDATORY_PARAMETERS: ['loginWithPattern', 'loginWithFingerPrint'],
   },
   MESSAGES: {
     WRONG_VALUE: 'information.personal.messages.wrongValue',

@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 
 import { AccountComponent } from './account.component';
-import { AccountAvatarComponent } from './avatar/acc-avatar.component';
-import { AccountInformationComponent } from './information/acc-information.component';
-import { AccountPersonalComponent } from './personal/acc-personal.component';
+import { AccAvatarComponent } from './avatar/acc-avatar.component';
+import { AccInformationComponent } from './information/acc-information.component';
+import { AccPersonalComponent } from './personal/acc-personal.component';
+import { AccSecurityComponent } from './security/acc-security.component';
 
-import { AccountPersonalInformationService } from './personal/acc-personal-information.service';
+import { AccPersonalInformationService } from './personal/acc-personal-information.service';
 
 import { CommonModule } from '@angular/common';
 import { AvatarModule } from 'ngx-avatar';
@@ -24,7 +25,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AccountComponent, AccountAvatarComponent, AccountInformationComponent, AccountPersonalComponent],
+  declarations: [AccountComponent, AccAvatarComponent, AccInformationComponent, AccPersonalComponent, AccSecurityComponent],
   imports: [
     CommonModule,
     AvatarModule,
@@ -42,7 +43,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   ],
   providers: [
     { provide: ACCOUNT_CONFIG, useValue: AccountConfig },
-    AccountPersonalInformationService
+    AccPersonalInformationService
   ],
   bootstrap: []
 })

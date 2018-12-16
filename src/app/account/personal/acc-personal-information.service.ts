@@ -1,22 +1,21 @@
-import {Inject, Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import {ACCOUNT_CONFIG, IAccountConfig} from '../account.config';
-import {TranslateService} from '@ngx-translate/core';
-import {AccountService, AccountInfo} from '../account.service';
-import {map} from 'rxjs/operators';
-import {ToastrService} from 'ngx-toastr';
+import { Inject, Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ACCOUNT_CONFIG, IAccountConfig } from '../account.config';
+import { TranslateService } from '@ngx-translate/core';
+import { AccountService, AccountInfo, AccountProperty } from '../account.service';
+import { map } from 'rxjs/operators';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable()
 
-export class AccountPersonalInformationService {
+export class AccPersonalInformationService {
   private static readonly PROPERTY_TRANSLATE_PATH = 'information.personal.property';
 
   constructor(
     @Inject(ACCOUNT_CONFIG) private accountConfig: IAccountConfig,
     private translate: TranslateService,
     private accountService: AccountService,
-    private toastrService: ToastrService,
-    private translateService: TranslateService
+    private toastrService: ToastrService
   ) {
   }
 
@@ -31,15 +30,15 @@ export class AccountPersonalInformationService {
   }
 
   public setProperty(property: string, value: string) {
-    const propertyDisplayName = this.translateService.instant(`${AccountPersonalInformationService.PROPERTY_TRANSLATE_PATH}.${property}`);
-    if (this.isParameterMandatory(property) && AccountPersonalInformationService.isValueErroneous(property, value)) {
-      const wrongMessageText = this.translateService.instant(this.accountConfig.MESSAGES.WRONG_VALUE);
+    const propertyDisplayName = this.translate.instant(`${AccPersonalInformationService.PROPERTY_TRANSLATE_PATH}.${property}`);
+    if (this.isParameterMandatory(property) && AccPersonalInformationService.isValueErroneous(property, value)) {
+      const wrongMessageText = this.translate.instant(this.accountConfig.MESSAGES.WRONG_VALUE);
       this.toastrService.error(wrongMessageText, propertyDisplayName, {
         timeOut: 5000,
         positionClass: 'toast-top-center'
       });
     } else {
-      const valueChangedText = this.translateService.instant(this.accountConfig.MESSAGES.VALUE_CHANGED);
+      const valueChangedText = this.translate.instant(this.accountConfig.MESSAGES.VALUE_CHANGED);
       this.toastrService.success(valueChangedText, propertyDisplayName, {
         timeOut: 5000,
         positionClass: 'toast-top-center'
@@ -48,7 +47,7 @@ export class AccountPersonalInformationService {
     }
   }
 
-  public getProprieties(): Observable<PersonalProperty> {
+  public getProprieties(): Observable<PersonalProperties> {
     return this.accountService.getAccount().pipe(
       map((account: AccountInfo) => ({
         firstName: {
@@ -113,17 +112,11 @@ export class AccountPersonalInformationService {
   }
 }
 
-export interface PersonalProperty {
+export interface PersonalProperties {
   firstName: AccountProperty;
   lastName: AccountProperty;
   day: AccountProperty;
   month: AccountProperty;
   year: AccountProperty;
   phone: AccountProperty;
-}
-
-export interface AccountProperty {
-  key: string;
-  value: string;
-  options?: string[];
 }

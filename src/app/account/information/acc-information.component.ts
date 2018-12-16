@@ -7,7 +7,7 @@ import { ACCOUNT_CONFIG, AccountInformationType, IAccountConfig} from '../accoun
   styleUrls: ['./acc-information.component.css']
 })
 
-export class AccountInformationComponent {
+export class AccInformationComponent {
   public informationTypes: Array<AccountInformationType>;
 
   constructor(@Inject(ACCOUNT_CONFIG) private accountConfig: IAccountConfig) {

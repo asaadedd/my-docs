@@ -1,5 +1,5 @@
 import { Component, HostBinding, OnInit, OnDestroy } from '@angular/core';
-import { AccountPersonalInformationService, PersonalProperty } from './acc-personal-information.service';
+import { AccPersonalInformationService, PersonalProperties } from './acc-personal-information.service';
 import { Subject, Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
@@ -9,19 +9,19 @@ import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
   styleUrls: ['./acc-personal.component.css']
 })
 
-export class AccountPersonalComponent implements OnDestroy {
+export class AccPersonalComponent implements OnDestroy {
   @HostBinding('class.account-root') class = true;
-  public proprieties: PersonalProperty;
+  public proprieties: PersonalProperties;
   private readonly proprietiesSubscription: Subscription;
   private readonly modelChanged: Subject<ProprietyChange>;
   private readonly modelChangedSubscription: Subscription;
 
-  constructor(private accountPersonalInformation: AccountPersonalInformationService) {
+  constructor(private accPersonalInformation: AccPersonalInformationService) {
     this.modelChanged = new Subject<ProprietyChange>();
     this.modelChangedSubscription = this.modelChanged
       .pipe(debounceTime(500))
-      .subscribe(model => { this.accountPersonalInformation.setProperty(model.property, model.value); });
-    this.proprietiesSubscription = this.accountPersonalInformation.getProprieties().subscribe((proprieties: PersonalProperty) => {
+      .subscribe(model => { this.accPersonalInformation.setProperty(model.property, model.value); });
+    this.proprietiesSubscription = this.accPersonalInformation.getProprieties().subscribe((proprieties: PersonalProperties) => {
       this.proprieties = proprieties;
     });
   }

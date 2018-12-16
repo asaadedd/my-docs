@@ -19,7 +19,13 @@
         "valueChanged": "Value successfully changed"
       }
     },
-    "security": {"TEXT": "Security"},
+    "security": {
+      "TEXT": "Security",
+      "property": {
+        "loginWithFingerPrint": "Login with Finger Print",
+        "loginWithPattern": "Login with pattern"
+      }
+    },
     "payments": {"TEXT": "Payments methods"}
   },
   "months": {
