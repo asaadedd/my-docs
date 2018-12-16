@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="D:\project\my-docs\src\app\account\personal\acc-personal-information.service.spec.ts">
+    <testCase name="Service: AccPersonalInformationService When property is set should set error message when the value is mandatory and erroneous" duration="2"/>
+    <testCase name="Service: AccPersonalInformationService When property is set should set error message when the value is mandatory and erroneous" duration="1"/>
+  </file>
+</testExecutions>
